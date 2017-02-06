@@ -21,6 +21,11 @@ $(call inherit-product-if-exists, vendor/honor/berlin/berlin-vendor.mk)
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
+# Screen density
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := xxhdpi
+PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi hdpi
+
 # Media configuration
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilts/media_codecs.xml:system/etc/media_codecs.xml \
@@ -112,8 +117,8 @@ PRODUCT_PACKAGES += \
     fingerprint.kl
 
 # Gello
-PRODUCT_PACKAGES += \
-    Gello
+#PRODUCT_PACKAGES += \
+#    Gello
 
 # KEYPAD
 PRODUCT_PACKAGES += \
@@ -133,6 +138,10 @@ PRODUCT_PACKAGES += \
     init.hi6250.rc \
     init.hi6250.usb.rc \
     ueventd.hi6250.rc
+
+# Torch
+PRODUCT_PACKAGES += \
+    Torch
 
 # LIBShim
 PRODUCT_PACKAGES += \

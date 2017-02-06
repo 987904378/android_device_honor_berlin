@@ -17,11 +17,19 @@ $(call inherit-product, device/honor/berlin/full_berlin.mk)
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
+# Overlay
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
 
-PRODUCT_NAME := lineage_berlin
+PRODUCT_NAME := cm_berlin
 BOARD_VENDOR := honor
+PRODUCT_RELEASE_NAME := Honor 6X
 
 PRODUCT_GMS_CLIENTID_BASE := android-huawei
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+	BUILD_DISPLAY_ID='rr_berlin-userdebug $(PLATFORM_VERSION) $(BUILD_ID) $(BUILD_NUMBER) test-keys' \
+	TARGET_BUILD_FLAVOR=rr_berlin-userdebug

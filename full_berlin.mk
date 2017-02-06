@@ -24,6 +24,6 @@ $(call inherit-product, device/honor/berlin/device.mk)
 # Device identifier. This must come after all inclusions
 PRODUCT_NAME := full_berlin
 PRODUCT_DEVICE := berlin
-PRODUCT_BRAND := HONOR
-PRODUCT_MANUFACTURER := HUAWEI
-PRODUCT_MODEL := HONOR-6X
+PRODUCT_BRAND := honor
+PRODUCT_MANUFACTURER := huawei
+PRODUCT_MODEL := honor-6x
