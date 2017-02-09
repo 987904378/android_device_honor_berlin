@@ -112,10 +112,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     fingerprint.kl
 
-# Gello
-#PRODUCT_PACKAGES += \
-#    Gello
-
 # KEYPAD
 PRODUCT_PACKAGES += \
     usbaudio.kl
